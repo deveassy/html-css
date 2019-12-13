@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5 form</title>
+</head>
+<body>
+
+<form action="#" method="post">
+	<fieldset>
+		<legend>html5 form</legend>
+		<p>
+			<label for="username">이름</label>
+			<input type="text" id="username" name="username" value="" placeholder="user name" autofocus="autofocus" autocomplete="off">
+		</p>
+		<p>
+			<label for="useremail">이메일</label>
+			<input type="email" id="useremail" name="useremail" value="" placeholder="example@host.com">
+		</p>
+		<p>
+			<label for="userurl">웹사이트</label>
+			<input type="url" id="userurl" name="userurl" value="">
+		</p>
+		<p>
+			<label for="order">주문수량</label>
+			<input type="number" id="order" name="order" value="" min="1" max="10" value="5">
+			<span>개</span>
+		</p>
+		<p>
+			<label for="userrange">길이</label>
+			<input type="range" id="userrange" name="userrange" min="0" max="100" step="10" value="50">
+		</p>
+		<p>
+			<label for="userdate">제출일</label>
+			<input type="date" id="userdate" name="userdate" value="2019-12-13" min="2019-12-01" max="2019-12-31">
+		</p>
+	</fieldset>
+	<input type="submit" value="send">
+</form>	
+</body>
+</html>
