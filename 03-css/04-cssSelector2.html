@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>css selector2</title>
+	<style> a에 걸리는 
+	body {
+		color: #333;
+	}
+	a {
+		color: #666;
+		text-decoration: none;
+	}
+	a:hover, a:active, a:focus {
+		color: red;
+		text-decoration: underline;
+	}
+	.lead:first-line { /*항상 첫줄에만 적용되게 하는 것*/
+		background-color: lime;
+	}
+	.lead:first-letter { /*첫번째 글자에만 적용되게 하는 것*/
+		font-size: 5em;
+	}
+	h1:before { /*h1태그에서 내용 맨 앞에 내용이나 속성을 추가하는 것, 위치를 적용*/
+		content: "Before area ";
+		color: red;
+	}
+	h1:after { /*h1태그에서 내용 맨 뒤에 내용이나 속성을 추가하는 것, 위치를 적용*/
+		content: " After area";
+		color: blue;
+	}
+	/*선택자의 순위가 같을 경우엔 나중에 쓴것이 적용됨*/
+	div {background-color: lime;} /*type = 1*/
+	.sample {background-color: pink;} /*class = 10*/
+	#sample {background-color: skyblue;} /*id = 100*/
+	div {background-color: red !important;} /*!important사용 시 무조건 적용되는 값이 됨*/
+	</style>
+</head>
+<body>
+
+	<h1>css selector</h1>
+	<p class="lead"><a href="http://naver.com/">naver</a> consectetur adipisicing elit. Quos eaque perspiciatis esse praesentium provident, dolor, excepturi nesciunt rem! Accusamus quisquam, non ad consequuntur dolores deserunt officiis, in ullam eos quaerat optio dicta commodi quibusdam nulla illo, earum quos explicabo. Eveniet quis, est. Unde aperiam perspiciatis necessitatibus! Ea exercitationem nostrum natus, quos, rem nam consectetur perferendis iure, est ab ratione. Quasi nihil alias sunt deleniti rem, deserunt, velit qui, animi tempora dolore quibusdam repellat hic provident quia totam illo aperiam temporibus fugiat delectus, <a href="#">nisi consequuntur molestias</a> consectetur. Enim voluptatum molestias cum! Perferendis optio dicta maxime sint obcaecati, iste eius, quidem doloribus!</p>
+	<hr>
+	<div class="sample" id="sample" style="background-color: orange"> <!-- inline style사용할 경우 우선순위는 1000정도 -->
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, aspernatur!
+	</div>
+	
+</body>
+</html>
