@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>font / text</title>
+	<style>
+		body,h1,h2 {
+			/*font-family: '돋움', dotum, Helvetica, sans-serif */
+			font-family: 'Malgun Gothic',Helvetica, sans-serif
+			font-size: 12px;
+		}
+		h1 {
+			background-color: yellow;
+			font-size: 2.4em;
+			letter-spacing: .5em; /*글자간격*/
+			text-transform: uppercase; /*대문자*/
+			/*uppercase | lowercase | capitalize*/
+		}
+		h2 {
+			color: #f00;
+			font-size: 2em;
+			font-variant: small-caps; /*소문자는 대문자로, 대문자는 더 큰 글자로 바뀜*/
+			text-decoration: line-through; /*취소선*/
+			/* underline | overline | line-through | none */
+		}
+		address {
+			font-style: normal;
+			/*normal | litalic | oblique*/
+		}
+		h1 small {
+			background-color: lime;
+			font-size: .5em;
+			vertical-align: 5px;
+			/* top | middle | baseline | bottom */
+		}
+		.lead {
+			font-size: 1.2em;
+			font-weight: bold;
+			/*bold | bolder | 600 | 700 | 800 | 900 두꺼운 글씨체*/
+			/*normal | lighter | 100 | 200 | 300 | 400 | 500 얇은 글씨체*/
+			word-spacing: 2em; /*단어간격*/
+		}
+		.text {
+			text-indent: 2em;
+			text-align: left;
+			/* left | center | right | justify */
+			line-height: 1.6em; /*줄간격*/
+			/*white-space: nowrap; 글자를 한줄로 정렬하는 것*/
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrap">	
+	<h1>style example <small>sample</small></h1>
+	<h2>Style Example (font variant)</h2>
+	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, ex.</p>
+	<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum accusamus dolores doloribus mollitia minima ad doloremque, nihil assumenda ut accusantium nostrum voluptate dignissimos saepe asperiores, excepturi ex eos voluptatibus in sed, deleniti, recusandae unde. Nisi inventore veniam aliquam soluta iure amet dolores eveniet quibusdam aut eum, aperiam accusantium odio unde ab illo neque dignissimos! Officiis temporibus, error iure molestiae ratione sequi illo nobis earum cum fuga doloribus magni ea velit cumque rerum, quae non optio. Velit distinctio minima iure harum, non sequi ex inventore optio? Veritatis et voluptate quas ratione, corporis doloribus, blanditiis, libero dignissimos eius alias sunt iure.</p>
+	<hr>
+	<address>add : Lorem ipsum dolor sit amet, consectetur adipisicing.</address>
+</div>
+
+	
+</body>
+</html>
