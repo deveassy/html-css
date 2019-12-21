@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>word-break, white-space</title>
+	<style>
+		body {
+			font-size: 16px;
+			font-family: 'Malgun Gothic', sans-serif;
+		}
+		.content, .content2, .content3 {
+			width: 500px; /*높이는 따로 지정하지 않는게 좋음, 내용에 따라 자동으로 늘어남*/
+			border: 3px solid black;
+		}
+		.content p {
+			word-break: break-all; /*지정된 보더 안에 한 단어를 다 집어넣게 됨*/
+		}
+		.content2 p {
+			text-align: justify;
+		}
+		.content3 p {
+			text-align: justify;
+			word-break: break-all; /*강제로 단어를 깨뜨려서 줄이 바뀌게 됨, 가독성은 떨어짐*/
+		}
+		/* white-space : nowrap | pre | pre-wrap | pre-line */
+		.white1 {
+			width: 600px;
+			border: 2px solid red;
+			white-space: pre;
+		}
+		.white2 {
+			width: 600px;
+			border: 2px solid red;
+			white-space: pre-wrap; /*보더 안으로 문장을 다 넣는 것, 단어는 깨지지 않음*/
+		}
+		.white3 {
+			width: 600px;
+			border: 2px solid red;
+			white-space: pre-line; /*코딩화면에 나온 것과 달리 라인을 지정해주는 것, 앞에 공백이 사라짐*/
+		}
+	</style>
+</head>
+<body>
+
+<div class="content">
+	<p>Loremipsumdolorsitamet,consecteturadipisicingelit.Accusamus,qui,accusantium.Distinctioarchitectodolorempariaturrepudindae,assumendatenetur,nisitotamerrorsuscipitdeseruntipsareiciendis,quas,aliquamquasiveniamillum!</p>
+</div>
+<div class="content2">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a necessitatibus aspernatur mollitia laudantium, quasi magni labore. Ipsa beatae mollitia corporis odit magnam distinctio iusto nisi dolore amet repellat, veniam a dolorem earum maxime optio quia nam aut, praesentium aliquam. Eligendi debitis deserunt ut, illo voluptates vitae qui rerum distinctio perspiciatis cum. Hic vero eaque a consectetur, tempore nihil sed obcaecati quam tempora sit recusandae soluta, porro reiciendis voluptates sapiente nemo beatae. Voluptate enim recusandae amet, expedita. Dolorem explicabo quam sapiente quae facere nam, impedit culpa dolorum, molestias asperiores quos amet ipsum. Maxime recusandae rem sint explicabo autem vel, architecto!</p>
+</div>
+<div class="content3">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum a necessitatibus aspernatur mollitia laudantium, quasi magni labore. Ipsa beatae mollitia corporis odit magnam distinctio iusto nisi dolore amet repellat, veniam a dolorem earum maxime optio quia nam aut, praesentium aliquam. Eligendi debitis deserunt ut, illo voluptates vitae qui rerum distinctio perspiciatis cum. Hic vero eaque a consectetur, tempore nihil sed obcaecati quam tempora sit recusandae soluta, porro reiciendis voluptates sapiente nemo beatae. Voluptate enim recusandae amet, expedita. Dolorem explicabo quam sapiente quae facere nam, impedit culpa dolorum, molestias asperiores quos amet ipsum. Maxime recusandae rem sint explicabo autem vel, architecto!</p>
+</div>
+<hr>
+<div class="white1">
+	Lorem ipsum 
+	dolor sit amet, 
+	consectetur adipisicing elit. 
+	Consequatur, dicta!
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum iusto, debitis vel ut dolorem recusandae aliquid quo quod incidunt atque a placeat perspiciatis dolor repudiandae ipsum assumenda dignissimos similique mollitia, illum doloremque dolorum, praesentium quisquam optio eius obcaecati! Animi voluptatem quaerat consequatur illum, asperiores sint ipsa error, corporis. A, voluptatum.
+</div>
+<div class="white2">
+	Lorem ipsum 
+	dolor sit amet, 
+	consectetur adipisicing elit. 
+	Consequatur, dicta!
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum iusto, debitis vel ut dolorem recusandae aliquid quo quod incidunt atque a placeat perspiciatis dolor repudiandae ipsum assumenda dignissimos similique mollitia, illum doloremque dolorum, praesentium quisquam optio eius obcaecati! Animi voluptatem quaerat consequatur illum, asperiores sint ipsa error, corporis. A, voluptatum.
+</div>
+<div class="white3">
+	Lorem ipsum 
+	dolor sit amet, 
+	consectetur adipisicing elit. 
+	Consequatur, dicta!
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum iusto, debitis vel ut dolorem recusandae aliquid quo quod incidunt atque a placeat perspiciatis dolor repudiandae ipsum assumenda dignissimos similique mollitia, illum doloremque dolorum, praesentium quisquam optio eius obcaecati! Animi voluptatem quaerat consequatur illum, asperiores sint ipsa error, corporis. A, voluptatum.
+</div>
+	
+</body>
+</html>
