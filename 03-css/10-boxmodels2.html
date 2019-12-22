@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>boxmodels2</title>
+	<style>
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		/*display: inline;*/
+		/*display: block;*/
+		display: inline-block; /*inline과 block의 성질 두가지를 가지기 때문에 margin의 부분이 더 늘어난것처럼 보임*/
+		/*padding-top: 200px;*/
+		/*padding: 100px 20px;*/ /*한가지-전체 | 두가지-앞:위아래 / 뒤:좌우*/
+		/*padding: 100px 50px 10px; /*세가지-위 | 좌우 | 아래*/
+		padding: 20px;
+		margin: 20px;
+		border: 3px solid black;
+		/*border-style : solid | dashed | dotted | double | inset | outset | ridge | groove*/
+		/*border-color*/
+		/*border-width*/
+		border-style: dashed; /*보더가 적용되어있을 때 스타일을 다르게 적용할 수 있음. 동일하게 시계방향으로 적용*/
+		background-color: lime;
+		/* top | ringt | bottom | left 시계방향으로 생각하기 */
+	}
+	</style>
+</head>
+<body>
+
+<div class="box">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ratione laborum sint excepturi alias fuga eaque accusamus ipsam deserunt velit, quod perferendis esse iusto vitae repellat, voluptatum, quisquam saepe id.
+</div>
+<div class="box">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ratione laborum sint excepturi alias fuga eaque accusamus ipsam deserunt velit, quod perferendis esse iusto vitae repellat, voluptatum, quisquam saepe id.
+</div>
+<div class="box">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ratione laborum sint excepturi alias fuga eaque accusamus ipsam deserunt velit, quod perferendis esse iusto vitae repellat, voluptatum, quisquam saepe id.
+</div>
+<span class="box"> <!-- margin의 설정에 오류가 나게 됨. display: block를 사용하여 블록으로 만들어주어야 한다. -->
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, accusamus dolorum, cupiditate, assumenda iusto, consectetur optio nemo corporis esse quod hic dolorem voluptates distinctio. Ipsa impedit, dolores quam similique ipsam?
+</span>
+	
+</body>
+</html>

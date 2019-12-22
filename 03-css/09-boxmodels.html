@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>boxmodels</title>
+	<style>
+	* /*모든 요소에 적용, 우선순위가 제일 낮은 것, 스타일의 초기화, 모든내용을 공통되게 만들어 줌*/{
+		margin: 0;
+		padding: 0;
+	}
+	/*
+	boxmodels 의 구성요소
+		content의 크기 - width | height
+		border
+		padding - 보더 기준 안쪽부분의 여백지정
+		margin - 보더 기준 바깥부분의 여백지정
+	*/
+		.box {
+			width: 600px;
+			/*border: 5px solid black;*/
+			/*padding: 20px;*/
+			margin: 30px;
+			background-color: lime;
+		}
+		.box2 {
+			border: 5px solid black; /*보더를 지정하게 될 경우, 글자크기가 600px이므로 기본보다 더 크게 설정이 됨*/
+			padding: 20px;
+		}
+		.box3 {
+			box-sizing: border-box; /*보더랑 패딩이 기본과 같은 사이즈로 설정이 됨, 많이 쓰임!(CSS3속성)*/
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="box">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio voluptas quia expedita nesciunt vel iste eos ipsam maxime, error impedit modi repellat aliquam accusamus sit fugiat, sequi doloremque corporis beatae.
+</div>
+<div class="box box2">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio voluptas quia expedita nesciunt vel iste eos ipsam maxime, error impedit modi repellat aliquam accusamus sit fugiat, sequi doloremque corporis beatae.
+</div>
+<div class="box box2 box3">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio voluptas quia expedita nesciunt vel iste eos ipsam maxime, error impedit modi repellat aliquam accusamus sit fugiat, sequi doloremque corporis beatae.
+</div>
+	
+</body>
+</html>
