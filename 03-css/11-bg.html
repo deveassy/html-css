@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>backgronud</title> <!-- background는 속성들을 다수의 값을 모아서 입력할 수 있음 --> 
+	<style>
+	/*body {*/
+		/*background: url(img/twt.png) no-repeat fixed 97% 20px;*/
+		/*background-attachment: fixed; 기본은 scroll, fixed로 값을 줄 경우 스크롤을 내려도 이미지가 고정이 됨*/
+	/*}*/
+	.box {
+		width: 600px;
+		padding: 20px;
+		margin: 10px;
+		border: 3px solid black;
+		/*background-image: url(img/twt.png); */
+		/*background-color: yellow; -들어간 속성을 나중에 써줘야 뒤에 적용이 됨*/
+		/*background-repeat: no-repeat; repeat | no-repeat | repeat-x | repeat-y*/
+		/*background-position: 0 50%;*/
+		/*기본은 left top = 0,0 | center = 50% | right bottom = 100%, 100%* */
+		   /*px를 사용할 수 있음. -를 사용하면 왼쪽 보더 밖으로 짤려서 나감*/
+	   background: url(img/photo.jpg) no-repeat 50% 50%;
+	}
+	.box2 {
+		/*background-size: auto 100%; CSS3버전 | 앞에가 가로, 뒤에가 세로크기 auto에 맞춰서 이미지가 잘릴 수 있음*/
+		background-size: cover; /*자동으로 이미지가 최적화되어 맞춰짐*/
+		background-clip: content-box; /*컨텐트 영역에만 배경이미지를 적용, 패딩영역에서는 짤려서 보임.*/
+		background-origin: content-box; /*CSS3버전 | 이미지가 패딩영역에서도 아예 제외되어서 컨텐트 박스 내에서만 이미지가 조정됨.*/
+	}
+	</style>
+</head>
+<body>
+
+<div class="box">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis repellat magnam eum maxime consequatur doloremque consectetur cum placeat exercitationem dolorum iste autem praesentium aperiam iure recusandae ratione iusto facere, obcaecati libero impedit sit, rem! Eligendi, veniam voluptate commodi sint nobis numquam expedita consectetur mollitia, nemo dolores aperiam reprehenderit voluptates ad nulla sunt placeat est. Voluptatem veniam repudiandae quas maxime quod culpa a illo officia, magnam tempore totam cumque repellendus ab, magni laboriosam sit vero excepturi! Officia, maxime, laborum. Aperiam repudiandae laborum laboriosam quod velit incidunt dolore molestias ad libero amet, adipisci deleniti ab maxime culpa asperiores magni ut in molestiae!
+</div>
+<div class="box box2">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis repellat magnam eum maxime consequatur doloremque consectetur cum placeat exercitationem dolorum iste autem praesentium aperiam iure recusandae ratione iusto facere, obcaecati libero impedit sit, rem! Eligendi, veniam voluptate commodi sint nobis numquam expedita consectetur mollitia, nemo dolores aperiam reprehenderit voluptates ad nulla sunt placeat est. Voluptatem veniam repudiandae quas maxime quod culpa a illo officia, magnam tempore totam cumque repellendus ab, magni laboriosam sit vero excepturi! Officia, maxime, laborum. Aperiam repudiandae laborum laboriosam quod velit incidunt dolore molestias ad libero amet, adipisci deleniti ab maxime culpa asperiores magni ut in molestiae!
+</div>
+
+	
+</body>
+</html>
