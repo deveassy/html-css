@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<style>
+		.tbl {
+			width: 800px;
+			table-layout: fixed; /*셀의 폭이 변하지 않고 일정한 폭으로, 내용이 늘어날 경우 밑으로 늘어남*/
+			/*border-collapse: collapse;*/
+		}
+		.tbl td, .tbl th {
+			border: 1px solid gray; /*그냥 클래스에 지정하면 바깥 테두리에만 선이 생김, 안쪽에는 생기지 않기에 영역 지정해주어야 함*/
+		}
+		.tbl caption {
+			caption-side: top;
+		}
+		.tbl .ex1,
+		.tbl .ex2 {
+			empty-cells: hide; /*비어있는 셀을 보여줄지, 가릴지 설정가능. 대신 border-collapse에서는 표현x*/
+		}
+		
+	</style>
+</head>
+<body>
+
+<table class="tbl" border>
+	<caption><strong>table caption</strong></caption>
+	<thead>
+		<tr>
+			<th scope="col">table header cell1-1</th>
+			<th scope="col">table header cell1-2</th>
+			<th scope="col">table header cell1-3</th>
+			<th scope="col">table header cell1-4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>table header cell2-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptatum asperiores illum, officia qui a suscipit voluptates quis officiis est.</td>
+			<td>table header cell2-2</td>
+			<td>table header cell2-3</td>
+			<td>table header cell2-4</td>
+		</tr>
+		<tr>
+			<td>table header cell3-1</td>
+			<td>table header cell3-2</td>
+			<td>table header cell3-3</td>
+			<td>table header cell3-4</td>
+		</tr>
+		<tr>
+			<td>table header cell4-1</td>
+			<td>table header cell4-2</td>
+			<td class="ex1"></td>
+			<td class="ex2"></td>
+		</tr>
+	</tbody>
+
+</table>
+	
+</body>
+</html>
