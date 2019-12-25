@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title> <!-- 홈페이지의 메뉴나 레이아웃은 다 플롯을 사용함 -->
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		
+		font: 12px 'Malgun Gothic', sans-serif;
+		/*font: weight style variant size/line-height family;*/
+		/*font: size family는 둘 중 하나라도 없으면 적용되지 않음*/
+	}
+	img {
+		vertical-align: top; /*이미지태그에서는 이미지와 이미지를 감싸는 요소 사이의 틈이 깔끔하게 정리가 됨*/
+	}
+	.wrap {
+		width: 800px;
+		margin: 0 auto; /*가운데정렬이 됨*/		
+	}
+	.wrap h1 {
+		padding: 15px 0;
+	}
+	.wrap .thumb {
+		float: left; /*left | right*/
+		border: 3px solid black;
+		margin: 15px 15px 0;
+	}
+	.wrap .text {
+		clear: left; /*left | right | both*/ /*더이상 플롯의 영향을 받지않고 처음부터 시작하기 위한 속성, 플롯 해지방법*/
+	}
+
+	</style>
+	
+</head>
+<body>
+
+<div class="wrap">
+	<h1>float example</h1>
+	<p class="thumb"><img src="http://placehold.it/100x120?text=1" alt=""></p>
+	<p class="thumb"><img src="http://placehold.it/100x120?text=2" alt=""></p>
+	<p class="thumb"><img src="http://placehold.it/100x120?text=3" alt=""></p>
+	<p class="thumb"><img src="http://placehold.it/100x120?text=4" alt=""></p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, ut ullam natus eaque obcaecati. Voluptatem earum praesentium mollitia sit quod, eveniet atque modi dolores ex in animi laboriosam suscipit molestias!</p>
+	<div class="text">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati nisi hic repudiandae nesciunt laudantium aliquam, amet, odit veritatis natus repellendus exercitationem perspiciatis officiis nobis assumenda excepturi maiores autem neque eaque a ea ut ex. Labore itaque dolore dicta temporibus, blanditiis quisquam minima placeat, nostrum velit, veritatis eligendi odit voluptate molestiae unde quaerat voluptas ipsa neque aperiam ducimus, recusandae molestias possimus? Vitae, deleniti, voluptas? Expedita blanditiis molestiae vel dignissimos corrupti cum fuga iste magnam natus consequatur voluptatum autem debitis aspernatur voluptate sapiente eveniet eius maiores, iusto voluptates eligendi error aliquid neque optio, inventore nostrum. Rem earum in nostrum iusto animi!</p>
+
+</div>	
+</body>
+</html>
