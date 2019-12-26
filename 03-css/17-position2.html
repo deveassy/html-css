@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+	.box {
+		width: 200px;
+		padding: 20px;
+		border: 5px solid black;
+		background-color: rgba(255,0,0,.5);
+		font: 12px/1.6 /*줄간격*/ verdana sans-serif;
+	}
+	.box:first-letter {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	.area { /* area로 전체를 묶어주었을때 relative가 기준점이 되어서 absolute가 적용이 됨 */
+		position: relative;
+		width: 800px;
+		margin: 0 auto;
+		border: 5px dashed red;
+	}
+	.a {
+		position: relative;
+		z-index: 100; /* 같은 포지션에서 숫자가 클수록 앞으로 나오게 됨 */
+		left: 0;
+		top: 0;
+		background-color: rgba(255,0,0,.7)
+		}
+	.b {
+		position: relative;
+		z-index: 50;
+		margin-top: -200px; /* top대신 margin으로 조절하면 컨텐츠 레이아웃이 자연스럽게 조절이 됨, 빈공간이 생기지 않음 */
+		left: 50px;
+		background-color: rgba(0,255,0,.7)
+	}
+	.c {
+		position: relative;
+		margin-top: -200px;
+		left: 100px;
+		background-color: rgba(0,0,255,.7)
+	}
+	</style>
+</head>
+<body>
+
+<div class="area">
+	<div class="box a">A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, molestias in officia modi dolore pariatur veritatis, excepturi earum temporibus, fuga error vero. Aspernatur magni asperiores facilis laudantium vitae quis, qui?</div>
+	<div class="box b">B Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, molestias in officia modi dolore pariatur veritatis, excepturi earum temporibus, fuga error vero. Aspernatur magni asperiores facilis laudantium vitae quis, qui?</div>
+	<div class="box c">C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, molestias in officia modi dolore pariatur veritatis, excepturi earum temporibus, fuga error vero. Aspernatur magni asperiores facilis laudantium vitae quis, qui?</div>
+</div>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quas nemo ratione, placeat suscipit incidunt, porro ea dignissimos iste quo numquam magni doloribus deserunt, molestiae tempore magnam repellendus laborum repudiandae reiciendis, ab. Sed alias rem odit sequi, corporis eum quaerat cum sapiente facere pariatur modi neque, recusandae consectetur aperiam dicta, nostrum nesciunt? Dicta unde fugit dignissimos, adipisci commodi, provident at obcaecati facere, nemo minima tenetur recusandae ipsum consequatur nihil. Ipsam accusamus sed, illum consectetur incidunt? Quibusdam ipsum tenetur est, ullam dolor atque fugiat, hic accusamus, temporibus vel debitis beatae placeat quo cupiditate quis sit sunt optio animi laborum, nisi at!</p>
+	
+</body>
+</html>

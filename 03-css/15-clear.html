@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>clear</title>
+	<style>
+	img {
+		vertical-align: top;
+	}
+	.area {
+		width: 800px;
+		/*overflow: hidden; 플롯부분에서 넘치는 부분을 가리기 위함, area:after보다 간단하긴 하지만 오류가 생길 수 있음*/
+		margin: 0 auto;
+		border: 3px dashed red;
+		*zoom: 1; /*IE6,IE7 hack*/
+	}
+	.area:after { /*float된 부분을 묶어주는 방법*/
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.area .thumb {
+		float: left;
+		border: 2px solid black;
+	}
+	.cls {
+		width: 800px;
+		margin: 0 auto;
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+
+<div class="area">
+	<div class="thumb"><img src="http://placehold.it/100x120?text=1" alt=""></div>
+	<div class="thumb"><img src="http://placehold.it/100x120?text=2" alt=""></div>
+	<div class="thumb"><img src="http://placehold.it/100x120?text=3" alt=""></div>
+	<div class="thumb"><img src="http://placehold.it/100x120?text=4" alt=""></div>
+	<div class="thumb"><img src="http://placehold.it/100x120?text=5" alt=""></div>
+	<!-- clear 위치 -->
+</div>
+<p class="cls">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ab ex ullam, commodi accusantium ratione delectus aliquam quis non deleniti libero deserunt quibusdam veniam aperiam expedita, officia corporis id vero? Sit ratione beatae vero harum fugiat neque ullam aut, reiciendis assumenda. Numquam accusamus doloribus soluta qui amet facilis alias eos officia quam ipsam suscipit totam eum consectetur quasi consequuntur ex eligendi similique aperiam sequi et ullam cupiditate, excepturi veritatis! Eaque, alias velit obcaecati optio maiores aut architecto harum reprehenderit ut, unde natus et quaerat distinctio. Numquam cupiditate deserunt explicabo laudantium possimus, molestias, eius, consectetur harum quidem praesentium, aperiam atque! Repudiandae.
+</p>
+	
+</body>
+</html>
