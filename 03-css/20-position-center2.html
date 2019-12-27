@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>position, senter, relative</title>
+	<style>
+
+		.content {
+			position: absolute; /*absolute일때 컨텐츠의 크기를 지정하지 않고, 좌우위아래 사이즈 조절로 컨텐츠의 크기를 조정할 수 있음(width, height가 없어야함)*/
+			left: 100px;
+			right: 100px;
+			top: 100px;
+			bottom: 100px; /*지정 시 입력한 사이즈에 맞게 컨텐츠의 크기가 늘어남, 창을 컨텐츠의 양보다 작게 조절할 경우 글자는 밖으로 벗어나지만 컨텐츠의 크기는 사이즈에 맞게 조절됨*/
+			background-color: lime;
+		}
+		.content .inn {
+		padding: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="content">
+	<div class="inn">
+	<h1>content title</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sapiente fugiat, provident quos amet, explicabo optio modi accusamus. Consectetur sequi suscipit magni adipisci voluptates expedita deleniti officia delectus velit at eaque quidem unde soluta laborum recusandae fugiat, reprehenderit laboriosam ipsam autem ea quo repudiandae. Nisi, recusandae repudiandae quasi ut maiores reprehenderit architecto maxime quod dolor dignissimos. Unde quisquam ullam, vitae architecto ratione molestiae sapiente eius nostrum qui, nemo delectus. Esse consectetur sit atque eos quas totam voluptatum est quae vero ipsa nulla incidunt molestiae, aspernatur fugit saepe a rerum. Id dicta modi nam quidem sed velit soluta earum natus vel.</p>
+	</div>
+</div>
+	
+</body>
+</html>
