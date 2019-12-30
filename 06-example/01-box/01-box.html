@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>box</title>
+	<style>
+	/* reset */
+	/*@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');*/
+	html, body {
+		width: 100%;
+		height: 100%;
+		}
+	body,h1,h2,h3,p {
+		margin: 0;
+		padding: 0;	
+	}	
+	body,h1,h2,h3,input,select,textarea,button,th,td {
+		/*font-family: 'Nanum Gothic', sans-serif;*/
+		font-family: 'Malgun Gothic' ,sans-serif;
+		font-size: 12px;
+	}
+
+	/* style */
+	.section {
+		position: relative; /*section_more에서 absolute를 지정하기 위해 감싸주는 클래스에 포지션 릴레이티브를 지정해줘야 함*/
+		margin: 20px;
+		border: 1px solid #ccc;
+	}
+	.section .hx {
+		border: 1px solid #fff;
+		padding: 8px;
+		background-color: #eee;
+		color: #333;
+		font-size: 1.1em;
+		font-weight: bold;
+	}
+	.section .tx {
+		border-top: 1px solid #ccc;
+		padding: 8px;
+		color: #555;
+		line-height: 1.5em;
+	}
+	.section .section_more {
+		position: absolute;
+		right: 8px;
+		top: 9px;
+	}
+	.section .section_more a {
+		position: relative;
+		color: #666;
+		text-decoration: none;
+		letter-spacing: -1px;
+	}
+	.section .section_more a .ico {
+		position: absolute;
+		left: -7px;
+		top: 3px;
+		display: block;
+		width: 0;
+		height: 0;
+		border: 10px solid red;
+		border-width: 5px 0 5px 5px; /*크기를 지정하지 않았을 때 사각형 중심을 기준으로 보더 길이를 주면 삼각형이 생김*/ 
+		border-color: transparent transparent transparent #aaa;
+	}
+	</style>
+</head>
+<body>
+
+<!-- UI Object -->
+<div class="section">
+	<h2 class="hx">제목</h2>
+	<div class="tx">내용</div>
+	<div class="tx">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis sint odit ut sequi laborum, vero reprehenderit officiis esse consequuntur magni dolores iusto, animi porro suscipit laudantium! Numquam ea fugiat in distinctio dicta harum, assumenda error accusantium. Quibusdam, ipsum nihil non! Blanditiis maiores nisi sit voluptas tempore, eaque vero, sed odio.</div>
+	<div class="tx">내용</div>
+	<p class="section_more"><a href="#" ><span class="ico"></span> 더보기</a></p>
+</div>
+<!-- //UI Object -->
+	
+</body>
+</html>
