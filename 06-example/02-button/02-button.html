@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>button</title>
+	<style>
+	/* reset */
+	html,body {width:100%;height:100%;}
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0;padding:0;}
+	body,input,textarea,select,button,table {font-family: 'Malgun Gothic',Dotum,AppleGothic,sans-serif;font-size: 12px;}
+	img,fieldset {border: 0;}
+	ul,ol {list-style: none;}
+	em,address {font-style: normal;}
+	a {text-decoration: none;}
+	a:hover,a:active,a:focus {text-decoration: underline;}
+
+	/* style */
+	.area {
+		margin: 30px;
+	}
+	.btn_pack{
+		display: inline-block;
+		background: url(img/btn_pack.gif) no-repeat 0 0;
+	}
+	.btn_pack a, /*인라인 요소는 크기지정이 되지 않음, 그렇기에 display로 속성을 바꿔주는 작업이 필요함.*/
+	.btn_pack button,
+	.btn_pack input {
+		position: relative;
+		display: inline-block;
+		height: 24px;
+		right: -4px;
+		padding: 0;
+		padding-left: 6px;
+		padding-right: 10px;
+		border: 0;
+		background: url(img/btn_pack.gif) no-repeat 100% 0;
+		color: #999;
+		text-decoration: none;
+		line-height: 24px; /*모든 버튼의 위치를 맞춰줌*/
+		cursor: pointer; /*버튼 위에 올렸을때 마우스 커서의 모양을 맞춰줌, 원래는 a에만 적용이 되어있던 것을 맞춰주었음*/
+	}
+	.btn_pack a:hover, /*마우스 커서 올렸을 때 바뀌는 색상 설정법*/
+	.btn_pack button:hover,
+	.btn_pack input:hover {
+		color: #000
+	}
+	.btn_pack.large { /*클래스 이름은 붙혀서 써야 함*/
+		background-position: 0 -30px;
+	}
+	.btn_pack.large a,
+	.btn_pack.large button,
+	.btn_pack.large input {
+		height: 30px;
+		background-position: 100% -30px;
+		font-size: 14px;
+		line-height: 30px;
+	}
+
+	.btn_pack.ico {
+		position: relative;
+	}
+	.btn_pack.ico .plus {
+		position: absolute;
+		display: block;
+		left: 8px;
+		top: 50%;
+		margin-top: -5px;
+		width: 10px;
+		height: 10px;
+		background: url(img/btn_pack.gif) no-repeat -20px -157px;
+	}
+	.btn_pack.ico a,
+	.btn_pack.ico button,
+	.btn_pack.ico input {
+		padding-left: 16px;
+	}
+	</style>
+</head>
+<body>
+
+<div class="area">
+	<span class="btn_pack ico"> <!-- icon의 설정을 위해(밑의 spanㅌㅐ그) 클래스에 이름을 지정해줌 -->
+		<span class="plus"></span>
+		<a href="#">anchor</a>
+	</span>
+	<span class="btn_pack ico">
+		<span class="plus"></span>
+		<button>button</button>
+	</span>
+	<span class="btn_pack ico">
+		<span class="plus"></span>
+		<input type="button" value="input"> <!-- span으로 감싸주는 이유는, a와 button태그와는 달리 input태그는 감싸주는 태그의 속성이 아니기 때문에 아이콘을 넣기 위해서는 감싸주는 태그인 span이 필요하다. -->
+	</span>
+	<hr>
+	<span class="btn_pack large">
+		<a href="#">anchor</a>
+	</span>
+	<span class="btn_pack large">
+		<button>button</button>
+	</span>
+	<span class="btn_pack large">
+		<input type="button" value="input">
+	</span>
+</div>
+	
+</body>
+</html>
