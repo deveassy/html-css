@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>faq</title>
+	<style>
+	/* reset */
+	html,body {width:100%;height:100%;}
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0;padding:0;}
+	body,input,textarea,select,button,table {font-family: 'Malgun Gothic',Dotum,AppleGothic,sans-serif;font-size: 12px;}
+	img,fieldset {border: 0;}
+	ul,ol {list-style: none;}
+	em,address {font-style: normal;}
+	a {text-decoration: none;}
+	a:hover,a:active,a:focus {text-decoration: underline;}
+
+	/* style */
+	.faq {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.faq .hgroup {
+		*zoom: 1; /*밑의 after처리를 해주어도 적용이 되지 않는 사양에서 적용되게 하기 위해 쓰는 코드(특히 *는 6,7에서만 적용)*/
+	}
+	.faq .hgroup:after { /*float처리 후 본문의 내용들이 사이에 들어오지 않고 밑으로 배치되게 하고 싶을 때 사용하는 코드*/
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.faq .hgroup h2 {
+		float: left;
+		padding: 15px 0;
+	}
+	.faq .hgroup button {
+		float: right;
+		margin: 18px 0 0 0;
+		border: 0;
+		background: none;
+		cursor: pointer;
+		letter-spacing: -1px;
+	}
+	.faq .faq_list {
+		border-top: 1px solid #ccc;
+	}
+	.faq .faq_list dt {}
+	.faq .faq_list dt a {
+		display: block;
+		padding: 8px 10px;
+		border-bottom: 1px solid #ccc;
+		color: #666;
+	}
+	.faq .faq_list dt a:hover {
+		background-color: #eee;
+		color: #222;
+	}
+	.faq .faq_list dt.active a {
+		border-bottom: none;
+		background-color: #eee;
+		color: #222;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.faq .faq_list dd {
+		display: none;
+		padding: 0 10px;
+		border-bottom: 1px solid #ccc;
+		color: #666;
+		line-height: 1.5;
+	}
+	.faq .faq_list dd.active {
+		display: block;
+	}
+	.faq .faq_list dd p {
+		margin: 8px 0;
+	}
+	</style>
+</head>
+<body>
+
+<!-- UI Object -->
+<div class="faq">
+	<div class="hgroup">
+		<h2>FAQ</h2>
+		<button type="button" class="trigger"><span>답변 모두 여닫기</span></button>
+	</div>
+	<dl class="faq_list">
+		<dt><a href="#a1">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a></dt>
+		<dd id="a1">
+			<p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
+		</dd>
+
+		<dt class="active"><a href="#a2">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a></dt>
+		<dd id="a2" class="active">
+			<p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quos libero, quibusdam ex a quis accusamus sint eveniet. Eveniet rem recusandae culpa vel ad, facere voluptatum nemo, fugit optio laboriosam?</p>
+		</dd>
+
+		<dt><a href="#a3">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a></dt>
+		<dd id="a3">
+			<p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci fuga facere, ipsam reprehenderit magnam animi libero. Impedit sed, iusto hic illo fugiat dignissimos atque quasi assumenda, sit ipsam, earum quisquam sequi error soluta ea tenetur iste eius. Iusto doloremque odit soluta sit praesentium, voluptatum quae! Veniam adipisci dicta neque. Nobis.</p>
+		</dd>
+	</dl>
+</div>
+<!-- //UI Object -->
+	
+</body>
+</html>
