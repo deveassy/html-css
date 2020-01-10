@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>gallery list</title>
+	<style>
+	/* reset */
+	html,body {width:100%;height:100%;}
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0;padding:0;}
+	body,input,textarea,select,button,table {font-family: 'Malgun Gothic',Dotum,AppleGothic,sans-serif;font-size: 12px;}
+	img,fieldset {border: 0;}
+	img {vertical-align: top;} /*이미지가 없는 부분에서 크기를 지정했을 때 기본 이미지에서 밑에 여백이 생기지 않게 하기 위함*/
+	ul,ol {list-style: none;}
+	em,address {font-style: normal;}
+	a {text-decoration: none;}
+	a:hover,a:active,a:focus {text-decoration: underline;}
+
+	/* style */
+	#content {
+		width: 900px;
+		margin: 0 auto;
+	}
+	#content h1 {
+		padding: 10px 0;
+		border-bottom: 1px solid #ccc;
+	}
+	.fixed_img_col {}
+	.fixed_img_col ul {
+		border-bottom: 1px solid #ccc;
+		*zoom: 1;
+	}
+	.fixed_img_col ul:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.fixed_img_col li {
+		position: relative; /*ul과 li의 밑줄을 겹치게 해주는 역할*/
+		top: 1px;
+		float: left;
+		width: 120px;
+		height: 190px;
+		border-bottom: 1px solid #ccc;
+		padding: 20px 15px 0 15px;
+	}
+	.fixed_img_col li a {
+		display: block; /*카테고리가 이미지 맨 위로 올라가게 하기 위함*/
+		color: #333;
+		text-decoration: none;
+	}
+	.fixed_img_col li a .thumb {
+		position: relative;
+		display: block;
+		text-align: center;
+		background-color: #ededed;
+		line-height: 120px;
+	}
+	.fixed_img_col li a .thumb img {}
+	.fixed_img_col li a .thumb em {
+		display: none;
+		position: absolute; /*그림 위에서 움직이지 않고 그 자리에서만 적용이 되게 하기 위함*/
+		opacity: .6; /*이미지에 마우스 올렸을 때 뒤에 이미지가 보일 정도로, 투명도를 지정하는 방법, 1에 가까울수록 어두워짐*/
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: #000;
+		color: #fff;
+		font-family: verdana,sans-serif;
+		font-weight: bold;
+		/*line-height: 120px;*/
+	}
+	.fixed_img_col li a:hover .thumb em {
+		display: block;
+	}
+	.fixed_img_col li a strong {
+		display: block;
+		padding: 6px 0 2px;
+		line-height: 1.4;
+	}
+	.fixed_img_col li a:hover strong {
+		text-decoration: underline; /*마우스 올렸을 때 노이미지에는 밑줄을 없애고, 제목에는 마우스 올렸을 때 밑줄이 나오게 하기 위함*/
+	}
+	.fixed_img_col li p {
+		color: #666;
+		font-size: .9em;
+	}
+	
+
+	</style>
+</head>
+<body>
+
+<!-- UI Object -->
+<div id="content">
+	<h1>Fixed Image+Text Col List</h1>
+	<div class="fixed_img_col">
+		<ul>
+			<li> <!--  이미지와 제목의 링크가 같은 목적지라면 링크를 분리하지 말고 하나로 묶어야 접근성에서 문제가 생기지 않음 -->
+				<a href="#">
+					<span class="thumb">
+						<img src="img/@thumbSquare.jpg" alt=""> 
+						<em>Category</em>
+					</span> 
+					<strong>이미지 제목</strong>
+				</a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목 이미지 제목 이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#"><span class="thumb"><img src="img/@thumbSquare.jpg" alt=""> <em>Category</em></span> <strong>이미지 제목</strong></a>
+				<p>2010-12-24</p>
+			</li>
+			<li>
+				<a href="#">
+					<span class="thumb">
+						No Images 
+						<em>Category</em>
+					</span> 
+					<strong>이미지 제목</strong>
+				</a>
+				<p>2010-12-24</p>
+			</li>
+		</ul>
+	</div>
+		
+<!-- //UI Object -->
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sunt officiis, deserunt, itaque cupiditate doloribus modi laudantium aliquid veritatis laboriosam debitis unde eaque. Perferendis ad nostrum eum beatae id nulla fugiat rem sed odio laboriosam corporis quo et provident perspiciatis a, rerum, aliquid ea, nam enim laborum quasi eaque earum. Impedit, illo, officiis! Illo molestias suscipit laudantium quae inventore dolorem optio magnam tenetur quibusdam nemo quo adipisci perferendis deserunt sapiente quis alias voluptatem nobis pariatur perspiciatis maiores, quas unde. Inventore eligendi et, facilis sed, saepe nostrum accusantium dignissimos! Sit quis magni id aperiam laborum voluptatem nostrum natus cumque quam odit!</p>
+</div>
+</body>
+</html>
