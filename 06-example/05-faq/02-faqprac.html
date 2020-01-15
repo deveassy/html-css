@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>faq practice</title>
+	<style>
+	/* reset */
+	html,body {width:100%;height:100%;}
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0;padding:0;}
+	body,input,textarea,select,button,table {font-family: 'Malgun Gothic',Dotum,AppleGothic,sans-serif;font-size: 12px;}
+	img,fieldset {border: 0;}
+	ul,ol {list-style: none;}
+	em,address {font-style: normal;}
+	a {text-decoration: none;}
+	a:hover,a:active,a:focus {text-decoration: underline;}
+
+	/* style */
+	.faq {
+		width: 600px;
+		margin: 0 auto;
+		border-bottom: 1px solid #ccc;
+	}
+	.faq .hgroup {
+		position: relative;
+	}
+	.faq .hgroup h2 {
+		padding: 15px 0;
+		font-size: 2em;
+	}
+	.faq .hgroup button {
+		position: absolute;
+		right: 0;
+		top: 33px;
+		float: right;
+		border: 0;
+		background: none;
+		cursor: pointer;
+		letter-spacing: -1px;
+	}
+	.faq .faq_list {
+		border-top: 1px solid #ccc;
+	}
+	.faq .faq_list dt {}
+	.faq .faq_list dt a {
+		display: block;
+		padding: 8px 10px;
+		font-size: 1.1em;
+		color: #333;
+		font-weight: bold;
+		background-color: #fafafa;
+	}
+	.faq .faq_list dt a:hover {
+		color: #000;
+		text-decoration: none;
+	}
+	.faq .faq_list dd {
+		display: none;
+		padding: 8px 10px;
+		line-height: 1.5;
+	}
+	.faq .faq_list dd.active {
+		display: block;
+	}
+	.faq .faq_list dd p {
+		color: #666;
+	}
+
+	</style>
+</head>
+<body>
+
+<!-- UI Object -->
+<div class="faq">
+	<div class="hgroup">
+		<h2>FAQ</h2>
+		<button type="button" class="trigger"><span>답변 모두 여닫기</span></button>
+	</div>
+	<ul>
+	<dl class="faq_list">
+		<dt><a href="#a1">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a></dt>
+		<dd id="a1" class="active">
+		<p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sequi, iusto delectus possimus eligendi veniam fugiat nobis natus cupiditate, reiciendis ratione? Qui illum labore, nulla suscipit odit sit rem. Quis odio ipsa quaerat, neque quo inventore ipsam eveniet ullam et possimus quas sed dolores autem delectus! Placeat earum, quis amet.</p></dd>
+	</dl>
+	<dl class="faq_list">
+		<dt><a href="#a2">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a></dt>
+		<dd id="a2">
+		<p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.</p></dd>
+	</dl>
+	<dl class="faq_list">
+		<dt><a href="#a3">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a></dt>
+		<dd id="a3">
+		<p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
+</dd>
+	</dl>
+	</ul>
+</div>
+<!-- //UI Object -->	
+	
+</body>
+</html>
