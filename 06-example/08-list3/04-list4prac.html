@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>list4 practice</title>
+	<style>
+	/* reset */
+	html,body {width:100%;height:100%;}
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0;padding:0;}
+	body,input,textarea,select,button,table {font-family: 'Malgun Gothic',Dotum,AppleGothic,sans-serif;font-size: 12px;}
+	img,fieldset {border: 0;}
+	img {vertical-align: top;} /*이미지가 없는 부분에서 크기를 지정했을 때 기본 이미지에서 밑에 여백이 생기지 않게 하기 위함*/
+	ul,ol {list-style: none;}
+	em,address {font-style: normal;}
+	a {text-decoration: none;}
+	a:hover,a:active,a:focus {text-decoration: underline;}
+
+	/* style */
+	#content {
+		width: 800px;
+		margin: 0 auto;
+	}
+	.lst_app {
+		*zoom: 1;
+	}
+	.lst_app:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.lst_app li {
+		float: left;
+		margin: 10px;
+	}
+	.lst_app li .thmb {
+		width: 180px;
+		height: 180px;
+		background: url(img/bg_thmb.gif) no-repeat;
+	}
+	.lst_app li .btn_area {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.lst_app li a {
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+	
+<div id="content">	
+	<!-- UI Object -->
+	<ul class="lst_app">
+	<li>
+	    <div class="thmb">
+	    	<a href="#">
+	    		<img src="img/@tmp_thmb.gif" width="180" height="180" alt="팡야">
+	    	</a>
+	    </div>
+	    <div class="btn_area">
+	        <a href="#">
+	        	<img src="img/btn_edt.gif" width="39" height="22" alt="수정">
+	        </a>
+	        <a href="#">
+	        	<img src="img/btn_del.gif" width="39" height="22" alt="삭제">
+	        </a>
+	    </div>
+	</li>
+	<li>
+	    <div class="thmb"></div>
+	    <div class="btn_area"><a href="#"><img src="img/btn_upld_img.gif" width="80" height="22" alt="이미지 올리기"></a></div>
+	</li>
+	<li>
+	    <div class="thmb"></div>
+	    <div class="btn_area"><a href="#"><img src="img/btn_upld_img.gif" width="80" height="22" alt="이미지 올리기"></a></div>
+	</li>
+	<li>
+	    <div class="thmb"></div>
+	    <div class="btn_area"><a href="#"><img src="img/btn_upld_img.gif" width="80" height="22" alt="이미지 올리기"></a></div>
+	</li>
+	</ul>
+	<!-- //UI Object -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit at repudiandae possimus dolorem, explicabo doloribus excepturi harum a nihil ullam repellat sequi. Consequuntur quia inventore iure quaerat aut itaque ab culpa laboriosam, accusamus minus doloremque corporis libero mollitia, autem obcaecati, nam laborum! Explicabo ipsa accusamus veritatis ad et voluptas fuga dolore doloremque velit temporibus, culpa, est expedita. Sed esse ducimus provident consectetur, facilis laboriosam praesentium fugit, id perspiciatis corporis odio architecto. Quasi mollitia, corrupti qui deleniti vero laudantium quaerat dolore molestiae ab doloremque blanditiis debitis dicta! Corporis delectus, ea, voluptas deserunt dolorem minus rem saepe facere dignissimos omnis, suscipit dolores.</p>
+
+</body>
+</html>
