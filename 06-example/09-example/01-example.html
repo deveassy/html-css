@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>example</title>
+	<style>
+	html,body {width: 100%; height: 100%}
+	body,ul,li,p {margin: 0; padding: 0;}
+	body {font-family: 'Malgun Gothic','맑은 고딕',sans-serif; font-size: 12px}
+	li {list-style: none}
+	em {font-style: normal}
+	img {vertical-align: top} /*img사이에 뜨는 공간을 없애줌*/
+	a {text-decoration: none}
+	a:hover,a:focus {text-decoration: underline}
+
+	/* style */
+	#content {width: 990px; margin: 0 auto}
+	.entertainment_gallery {margin-bottom: 15px}
+	.entertainment_gallery ul {*zoom: 1;}
+	.entertainment_gallery ul:after {content: ''; display: block; clear: both;}
+	.entertainment_gallery li {float: left; width: 192px; margin: 17px 17px 0 0; color: #222}
+	.entertainment_gallery li a {display: block; position: relative; color: inherit} /*글자상속요소, 부모에 지정된 요소를 상속하여 받음*/
+	.entertainment_gallery li a:hover {color: #118eff 	}
+	.entertainment_gallery li a .thumb {}
+	.entertainment_gallery li a .thumb img {width: 100%} /*li에서 크기를 지정했을 때 이미지 크기와 맞지 않을 경우 img 요소를 따로 찾아서 크기지정을 해주어야 함*/
+	.entertainment_gallery li a .txt {display: block; margin-top: 5px; padding-right: 20px; line-height: 18px}
+	/*.entertainment_gallery li a:hover .txt {color: #118eff} 밑줄색이 a에 지정된 색이 상속됨*/
+	.entertainment_gallery li a .ico {display: block; position: absolute; top: 84px; right: 8px; width: 23px; height: 23px; background: url(img/ico.png) no-repeat; text-indent: -9999em}
+	.entertainment_gallery li a .ico.pic {background-position: -40px 0}
+	.entertainment_gallery li a .ico.mov {background-position: -70px 0}
+	</style>
+</head>
+<body>
+
+<div id="content">
+	<div class="entertainment_gallery">
+		<ul>
+			<li>
+				<a href="#">
+					<span class="thumb"><img src="img/thumb1.jfif" alt="성훈 데뷔 10년차, 숨을 곳 없어..목숨 걸..."></span>
+					<em class="txt">성훈 "데뷔 10년차, 숨을 곳 없어..목숨 걸..."</em>
+					<span class="ico pic">사진</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="thumb"><img src="img/thumb2.jfif" alt="하니, 배우 안희연으로 떨리는 발걸음"></span>
+					<em class="txt">하니, 배우 안희연으로 떨리는 발걸음</em>
+					<span class="ico pic">사진</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="thumb"><img src="img/thumb3.jfif" alt="'뭉찬' 꾀부리고 투덜대는 이 형님들에게 동질감..."></span>
+					<em class="txt">'뭉찬' 꾀부리고 투덜대는 이 형님들에게 동질감...</em>
+					<span class="ico mov">동영상</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="thumb"><img src="img/thumb4.jfif" alt="강하늘 동백 꽃 필 무렵 팀워크 소중, 기..."></span>
+					<em class="txt">강하늘 "'동백 꽃 필 무렵' 팀워크 소중, 기...</em>
+					<span class="ico pic">사진</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ducimus quae, ratione corrupti, minus possimus. Unde maxime repudiandae delectus, ab perferendis cum eaque reprehenderit necessitatibus velit reiciendis atque totam culpa enim facilis magni animi nulla minima nostrum adipisci consequuntur in blanditiis. Laborum porro deleniti nam beatae minus blanditiis, earum repellat odit, repudiandae optio ab veritatis, pariatur commodi harum velit quam corrupti, ea eum deserunt! Cum saepe, dolorem totam consectetur repudiandae odit hic, repellat, sunt eos molestias nihil praesentium vero natus deleniti reiciendis et laborum? Minus deleniti quas, quae iure autem esse harum necessitatibus earum consequatur omnis dolor consectetur odio cum.</p>	
+</div>
+
+	
+</body>
+</html>
