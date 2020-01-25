@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+	/* reset */
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0; padding:0;}
+	body,input,textarea,select,button,table {font-family:'Malgun Gothic',NanumGothic,Malgun Gothic,'돋움',Dotum,helvetica,arial,sans-serif; font-size:12px;}
+	img,fieldset {border:0;}
+	img {vertical-align: top}
+	ul,ol {list-style:none;}
+	em,address {font-style:normal;}
+	a {text-decoration:none;}
+	a:hover,a:active,a:focus {text-decoration:underline;}
+	
+	/* layout */
+	#wrap {
+		background-color: gray;
+	}
+	#header {
+		min-width: 970px;
+		padding: 20px 0;
+		background-color: red;
+	}
+	#header .header_area {
+		width: 970px;
+		margin: 0 auto;
+	}
+	#container {
+		width: 970px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+		*zoom: 1;
+		background-color: lime;
+	}
+	#container:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	#container #content {
+		float: right;
+		width: 600px;
+		background-color: blue;
+	}
+	#container #content .inn { /*바로 content에서 패딩지정을 해버리면 width크기와 충돌하여 오류발생하기 때문에 따로 class지정해줌*/
+		padding: 20px;
+	}
+	#container .aside {
+		float: left;
+		width: 370px;
+		background-color: green;
+	}
+	#container .aside .inn {
+		padding: 20px;
+	}
+	#footer {
+		min-width: 970px;
+		padding: 20px 0; /*위아래 크기만 지정해야 min-width와 충돌이 없음*/
+		background-color: silver;
+	}
+	#footer .footer_area {
+		width: 970px;
+		margin: 0 auto;
+	}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+	<div class="header_area">
+		<h1>LOGO</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quod debitis, iusto eveniet placeat hic nihil reiciendis eaque optio.</p>
+	</div>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- content -->
+		<div id="content">
+			<div class="inn">
+				<h2>Content</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos illum et voluptatibus eius accusantium neque repellat harum laudantium molestias aut!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolorem dolor, qui est tempore cum, eaque optio veritatis autem sint expedita recusandae minima alias sed rerum non laudantium animi. Maxime tempore in nam fuga ipsa ut consequatur inventore obcaecati, enim expedita quas delectus eveniet repellat reiciendis accusantium rem possimus. Iste?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolorem dolor, qui est tempore cum, eaque optio veritatis autem sint expedita recusandae minima alias sed rerum non laudantium animi. Maxime tempore in nam fuga ipsa ut consequatur inventore obcaecati, enim expedita quas delectus eveniet repellat reiciendis accusantium rem possimus. Iste?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quasi beatae, nemo quaerat culpa recusandae ratione dolorem, magnam quibusdam consequuntur provident ad? Culpa, pariatur, aspernatur, et soluta omnis mollitia, reiciendis debitis eligendi eius nesciunt reprehenderit ullam amet nisi alias iusto!</p>
+			</div>
+		</div>
+		<!-- //content -->
+		<!-- aside -->
+		<div class="aside">
+			<div class="inn">
+				<h2>Aside</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam similique veniam rem doloremque magnam numquam nemo voluptatibus voluptatum. Eum quo, odit fugiat voluptate neque iusto inventore hic odio porro tempore beatae perferendis, fugit modi. Reiciendis libero velit quisquam facilis nisi.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nesciunt expedita debitis tenetur inventore, eligendi.</p>
+			</div>
+		</div>
+		<!-- //aside -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+	<div class="footer_area">
+		<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, ratione!</address>
+		<p>Copyright &copy; </p>
+	</div>
+	</div>
+	<!-- //footer -->
+</div>
+	
+</body>
+</html>
