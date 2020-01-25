@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style>
+	/* reset */
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+	body,input,textarea,select,button,table{font-family:'Malgun Gothic''돋움',Dotum,AppleGothic,sans-serif;font-size:12px}
+	img,fieldset{border:0}
+	img{vertical-align: top}
+	ul,ol{list-style:none}
+	em,address{font-style:normal}
+	a{text-decoration:none}
+	a:hover,a:active,a:focus{text-decoration:underline}
+	legend,.blind{display: block;position: absolute;left: 0;top: -9999em;overflow: hidden;}
+
+	/* style */
+	#content {
+		width: 980px;
+		margin: 0 auto;
+	}
+	.bg {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgb(0,0,0,.6);
+	}
+	.login {
+		display: none;
+		position: absolute; /*창을 가운데정렬 시키기 위해*/
+		left: 50%;
+		top: 50%;
+		margin-left: -192px;
+		margin-top: -95px;
+		z-index: 100;
+		width: 384px;
+		border:2px solid #555;
+		background-color: #fff;
+	}
+	.login fieldset {
+		padding: 28px 28px 10px;
+	}
+	.login fieldset .field {
+		margin-bottom: 5px;
+	}
+	.login fieldset .field .inp_field {
+		width: 326px;
+		height: 28px;
+		border: 1px solid #b7b7b7;
+		border-color: #b7b7b7 #e1e1e1 #e1e1e1 #b7b7b7;
+		color: #767676;
+		font: bold 11px/28px verdana,sans-serif; /*weight/size/line-height/font-family 순서로 합쳐서 입력 가능*/
+		/*font-family: verdana,sans-serif;*/
+		/*font-size: 11px;*/
+		/*font-weight: bold;*/
+		text-indent: 9px; /*패딩으로 지정할 수 있지만 width크기보다 커질 수 있으므로 들여쓰기 사용*/
+		/*line-height: 28px; height와 같이 지정할 경우 모든 브라우저에서 가운데정렬이 됨*/
+	}
+	.login fieldset .area {
+		padding-top: 5px; 
+		*zoom: 1;
+	}
+	.login fieldset .area:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.login fieldset .chk_field {
+		float: left;
+		margin-top: 7px;
+		color: #767676;
+		font: 11px '돋움',dotum,helvetica,sans-serif;
+	}
+	.login fieldset .chk_field input {
+		vertical-align: middle;
+	}
+	.login fieldset .btn_area {
+		float: right;
+		margin-right: 4px;
+	}
+	.login fieldset .btn_area .btn_submit {
+		background: none;
+		border: 0 none;
+		padding-left: 40px;
+		background: url(img/btn.gif) no-repeat 0 0;
+		cursor: pointer;
+	}
+	.login fieldset .btn_area .btn_submit span {
+		display: block;
+		position: relative;
+		right: -4px;
+		height: 32px;
+		padding-right: 20px;
+		background: url(img/btn.gif) no-repeat 100% 0;
+		color: #fff;
+		font-weight: bold;
+		line-height: 32px;
+	}
+	.login .nav {
+		padding: 14px 0;
+		background-color: #fafafa;
+		border-top: 1px solid #d9d9d9;
+		text-align: center;
+	}
+	.login .nav li {
+		display: inline;
+		margin-right: 8px;
+		padding-right: 10px;
+		border-right: 1px solid #c3c3c3;
+	}
+	.login .nav li a {
+		font-size: 11px;
+		color: #767676;
+	}
+	.login .nav li.last { /*마지막 옆 줄을 없애기 위해 따로 class를 지정*/
+		margin-right: 0;
+		padding-right: 0;
+		border: 0;
+	}
+	.login .btn_close {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.login .btn_close button {
+		width: 26px;
+		height: 26px;
+		background: none;
+		border: 0 none;
+		font: bold 11px verdana,sans-serif;
+		color: #cacaca;
+		text-align: center;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+
+<div id="content">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, explicabo, cum. Alias cupiditate laboriosam autem, dolore nemo itaque fuga molestiae ab placeat vitae eos, neque expedita aliquid, blanditiis quos similique libero. Commodi voluptas, iusto, ut accusantium odit deserunt amet dolorum. Eum perspiciatis laboriosam quibusdam, molestiae quasi possimus! Velit nemo atque corporis cum quam, dolorem dicta facere officia ipsam provident neque soluta ut harum omnis id delectus voluptas illo, magnam quas consequatur ad maiores consequuntur enim inventore. Aliquam at rerum, quisquam voluptatum aliquid! Vel praesentium ipsa explicabo, dicta consequuntur tempora consequatur optio error illum eos molestiae, veniam animi tenetur molestias in.</p>
+	<hr>
+	<p><button class="btn_login">로그인</button></p>
+
+	<div class="login">
+		<form action="#" method="post">
+			<fieldset>
+				<legend>로그인</legend>
+				<p class="field">
+					<label for="user_id" class="blind">ID</label>
+					<input type="text" id="user_id" name="user_id" value="" placeholder="ID" class="inp_field">
+				</p>
+				<p class="field">
+					<label for="user_pw" class="blind">PASSWORD</label>
+					<input type="password" id="user_pw" name="user_pw" value="" placeholder="PASSWORD" class="inp_field">
+				</p>
+				<div class="area">
+				<p class="chk_field">
+				<input type="checkbox" id="stay" name="stay" value="">
+				<label for="stay">로그인유지</label>	
+				</p>
+				<p class="btn_area">
+					<button type="submit" class="btn_submit"><span>로그인</span></button>
+				</p>
+				</div>
+			</fieldset>
+			<div class="nav">
+				<ul>
+					<li><a href="">아이디/비밀번호 찾기</a></li>
+					<li><a href="">회원 가입</a></li>
+					<li class="last"><a href="">Opne ID</a></li>
+				</ul>
+			</div>
+		</form>
+		<p class="btn_close"><button type="button">X</button></p>
+	</div>
+	<div class="bg">
+		
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+  	$(function(){
+  		$('.btn_login').click(function(){ 
+  			$('.bg, .login').show();
+  		});
+  		$('.btn_close button').click(function(){
+  			$('.bg, .login').hide();
+  		});
+  	});
+  </script>
+</body>
+</html>
