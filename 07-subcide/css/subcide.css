@@ -13,8 +13,13 @@ hr {display: none}
 
 /* style */
 #wrap {width: 760px; margin:0 auto}
-#header {position: relative; padding-bottom: 150px; background: url(../img/visual_about.jpg) no-repeat 0 100%} /*그림이 반복되지 않고, 다음 글 전까지 꽉 채워지게 하는 것*/
+#header {position: relative; padding-bottom: 150px; background: no-repeat 0 100%} /*그림이 반복되지 않고, 다음 글 전까지 꽉 채워지게 하는 것*/
+.about #header {background-image: url(../img/visual_about.jpg)}
+.contact #header {background-image: url(../img/visual_contact.jpg)}
+.portfolio #header {background-image: url(../img/visual_portfolio.jpg)}
+.services #header {background-image: url(../img/visual_services.jpg)}
 #header .logo {position: absolute; right: 26px; top: 106px} /*다른요소를 건너뛰어서 원하는자리에 두기 위해서는 absolute사용*/
+.intro #header .logo {position: static} /*absolute지정되지 않은 상태로 되돌리는 것*/
 #header .lnb {padding-left: 11px; *zoom: 1}
 #header .lnb:after {content: ''; display: block; clear: both}
 #header .lnb li {float: left}
@@ -30,6 +35,7 @@ hr {display: none}
 #container {padding-bottom: 20px; *zoom: 1}
 #container:after {content: ''; display: block; clear: both}
 #container #content {float: left; width: 63%; color: #666; line-height: 1.2}
+.intro #container #content {float: none; width: auto; text-align: center} /*크기와 플롯을 없애주어야 전체크기에서 가운데정렬이 됨*/
 #container #content .inner {padding: 25px 25px 0}
 #container #content h2,
 #container #content p,
