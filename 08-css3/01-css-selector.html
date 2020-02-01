@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 selector</title>
+	<style>
+	:root {font-size: 20px} /*= html {font-size: 20px}*/
+	body {font: 12px 'Trebuchet MS', sans-serif}
+	h1 {font-size: 1rem} /*em은 바로 위(body)에 지정된 글자크기를 상속받고, rem은 무조건 html에 지정된 기본글자크기를 상속받음*/
+	.wrap h1 ~ p {background-color: lime} /*+를 사용하면 h1바로 다음p만 선택되고, ~를 사용하면 h1의 형제요소들만 선택됨*/
+	.wrap a[href ^= "http"] {background-color: orange} /*^=는 ""안에 들어간 단어로 시작되는 것을 찾아서 표시할 때 사용*/
+	.wrap a[href ^= "mail"] {background-color: blue; color: white;}
+	.wrap a[href $= "pdf"] {background-color: pink} /*$=는 ""안에 들어간 확장자의 이름을 찾아서 표시할 때 사용*/
+	.wrap a[title *="으로"] {color: red} /**=는 title값이 들어있기만 하면 선택됨*/
+	.wrap p:empty {border-bottom: 1px solid green} /*p안에 값이 없는 것을 찾아서 적용(띄어쓰기도 없어야 함)*/
+	/*ol li:nth-child(3) {border-bottom: 3px solid red} 3번째 li를 찾아서 표시*/
+	/*ol li:first-child {border-bottom: 3px solid red} 첫번째 li를 찾아서 표시*/
+	/*ol li:last-child {border-bottom: 3px solid red}*/
+	/*ol li:first-child {border-bottom: 3px solid red}*/
+	/*ol li:nth-child(3n) {border-bottom: 3px solid red} 3번째li마다 표시*/
+	/*ol li:nth-child(3n+2) {border-bottom: 3px solid red} 2번째 이후로 3번째 li마다 표시*/
+	/*ol li:nth-last-child(3) {border-bottom: 3px solid red} 마지막에서 3번째li를 표시*/
+	/*dl dt:nth-child(1) {background-color: silver} 이때 dd는 적용이 되지 않음, 첫번째 자식이 아니기 때문*/
+	dl dt:nth-of-type(1) {background-color: silver} /*타입중에서 첫번째요소를 표시(dt,dd모두 가능)*/
+	#sample {display: none} /*처음 화면에 띄울때는 DL부분이 보이지 않음*/
+	#sample:target {display: block} /*DL링크를 누르게 되면(타겟) 보여짐*/
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>css3 selector</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ea, laudantium totam quo nemo suscipit fugit qui consequatur excepturi rerum et laborum quos doloribus optio porro ut libero, quasi amet.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, optio.</p>
+		<p><a href="#sample">DL sample</a></p>
+		<dl id="sample">
+			<dt>description terms</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reiciendis repudiandae explicabo!</dd>
+			<dt>description terms</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reiciendis repudiandae explicabo!</dd>
+			<dt>description terms</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reiciendis repudiandae explicabo!</dd>
+			<dt>description terms</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reiciendis repudiandae explicabo!</dd>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid maxime tempora cumque!</dd>
+		</dl>
+		<hr>
+		<ol>
+			<li><a href="http://naver.com/" title="네이버로 이동">naver</a></li>
+			<li><a href="http://daum.net/" title="다음으로 이동">daum</a></li>
+			<li><a href="mailto:eu2004@naver.com">mailing</a></li>
+			<li><a href="download/sample.pdf" title="pdf파일 다운로드">download</a></li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Lorem ipsum dolor sit amet.</li>
+		</ol>
+		<p></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa repudiandae aperiam eveniet minima inventore eum explicabo expedita excepturi adipisci quidem.</p>
+	</div>	
+</body>
+</html>
