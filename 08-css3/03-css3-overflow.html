@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>overflow</title>
+	<style>
+	#wrap {
+		width: 600px;
+		padding: 20px;
+		margin: 0 auto;
+		border: 1px solid black;
+		border-width: 0 1px;
+		font: 12px arial,sans-serif;
+	}
+	.sample {
+		display: block;
+		overflow: hidden;
+		width: 100%; /*인라인에서는 width적용이 안됨, 블록처리를 해주어야 함*/
+		white-space: nowrap; /*줄바꿈이 안되게 하는 것*/
+		text-overflow: ellipsis; /*말줄임표*/
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<p class="sample">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae mollitia expedita, dolorem accusantium temporibus asperiores odit alias aliquam quas ab cum neque id ipsam sequi fugit, quod, non sint qui.</p>
+		<span class="sample">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quos nulla eveniet molestias repudiandae maiores vitae odio similique dolorem magnam, dolor officiis exercitationem unde, saepe, dolorum quae amet maxime illo?</span>
+	</div>
+	
+</body>
+</html>
