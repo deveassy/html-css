@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>border-radius</title>
+	<style>
+	body {
+		font: 12px 'Malgun Gothic',sans-serif;
+	}
+	.box {
+		width: 400px;
+		height: 400px;
+		border: 3px solid black;
+		border-radius: /*가로,세로방향에 모두 적용 | (가로) 50px 50px 50px 50px / (세로) 50px 50px 50px 50px 와 같음*/
+			100px 30%; /*=50%*/
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box">
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>multi columns</title>
+	<style>
+	body {
+		font: 12px 'Malgun Gothic',sans-serif;
+	}
+	#wrap {
+		width: 80%;
+		margin: 0 auto;
+		/*column-count: 3; 몇개로 나눌건지
+		column-gap: 20px; 칼럼 사이의 간격 조정
+		column-rule: 1px dashed #aaa; 칼럼 사이에 경계선 긋기*/
+		/*column-width: 300px; 기본창의 크기에 따라서 자동으로 조정됨*/
+		columns: 100px 3; /*width와 count*/
+	}
+	#wrap h1 {
+		column-span: all; /*h1밑으로 데이터들을 내리는 것*/
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>multi columns</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nulla possimus iure delectus officia error sint quisquam. Atque dolorem perferendis quidem deserunt amet architecto dolor eligendi eos et minus illo delectus rem ipsam sint accusantium aut suscipit eaque consequatur ab sed possimus, ut aliquam praesentium quibusdam. Repudiandae, ab sapiente vero?</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nulla possimus iure delectus officia error sint quisquam. Atque dolorem perferendis quidem deserunt amet architecto dolor eligendi eos et minus illo delectus rem ipsam sint accusantium aut suscipit eaque consequatur ab sed possimus, ut aliquam praesentium quibusdam. Repudiandae, ab sapiente vero?</p>
+	</div>
+	
+</body>
+</html>
