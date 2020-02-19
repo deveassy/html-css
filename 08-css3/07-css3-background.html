@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background</title>
+	<style>
+	body {
+		font: 12px 'Malgun Gothic',sans-serif;
+	}
+	.box {
+		width: 400px;
+		padding: 20px;
+		border: 3px solid black;
+		background: url(img/photo.jpg) no-repeat 0 0 / cover; /*cover는 자동으로 이미지가 맞춰진 후 넘치는 부분은 잘라냄*/
+			/*url(img/twitt.png) no-repeat 50px 30px, 먼저 입력한것이 앞으로 표시됨
+			url(img/insta.png) no-repeat 55px 35px,*/
+		background-clip: content-box; /*컨텐트 영역의 이미지만 표시하고 나머지는 숨김*/
+		background-origin: content-box; /*컨텐트 영역부터 이미지가 시작됨*/
+		color: white;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ab saepe doloribus, adipisci suscipit iure quae. Exercitationem sed aliquid tempore adipisci, impedit minima saepe eum temporibus facere ut sapiente voluptates quas atque qui nisi incidunt ratione voluptas enim officia nulla veritatis! Debitis non, animi excepturi eligendi odit atque dolores explicabo.
+		</div>
+	</div>
+	
+</body>
+</html>
