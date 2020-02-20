@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<style>
+	body {
+		font: 12px 'Malgun Gothic',sans-serif;
+	}
+	#wrap {
+		width: 900px;
+		margin: 0 auto;
+		display: flex; /*자동으로 컬럼이 나눠지게 됨*/
+	}
+	#wrap h1 {
+		flex: 1; /*비율로 표시됨*/
+	}
+	#wrap .text {
+		flex: 4;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Flex example</h1>
+		<div class="text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, molestias velit tempore magni doloribus necessitatibus saepe quae iure deserunt rerum ipsum totam placeat ullam ad provident dolorem cumque illo officia esse! Necessitatibus reiciendis, consequatur eaque saepe voluptate ullam cupiditate blanditiis similique eligendi quod, ab provident unde expedita doloribus nobis tempora nostrum. Totam necessitatibus doloremque laudantium animi reprehenderit tempora dolore vel alias provident ducimus laboriosam facere, voluptas excepturi voluptates rem velit deserunt reiciendis a, delectus! Eos aliquam cumque placeat, animi laborum repellendus assumenda dolores doloremque. Nulla explicabo atque, natus modi id voluptas iure nostrum sit velit, ut fuga, provident vel necessitatibus.</p>	
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, molestias velit tempore magni doloribus necessitatibus saepe quae iure deserunt rerum ipsum totam placeat ullam ad provident dolorem cumque illo officia esse! Necessitatibus reiciendis, consequatur eaque saepe voluptate ullam cupiditate blanditiis similique eligendi quod, ab provident unde expedita doloribus nobis tempora nostrum. Totam necessitatibus doloremque laudantium animi reprehenderit tempora dolore vel alias provident ducimus laboriosam facere, voluptas excepturi voluptates rem velit deserunt reiciendis a, delectus! Eos aliquam cumque placeat, animi laborum repellendus assumenda dolores doloremque. Nulla explicabo atque, natus modi id voluptas iure nostrum sit velit, ut fuga, provident vel necessitatibus.</p>	
+		</div>
+	</div>
+	
+</body>
+</html>
