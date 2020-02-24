@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html, body {
+		width: 100%;
+		height: 100%;	
+	}
+	body {
+		perspective: 1000px; /*깊이를 표현하기 위해서 설정해주어야 하는 것, 실제 값이라기보다는 임의로 설정해 주는 것*/
+		perspective-origin: 50% 50%; /*따로 설정하지 않을 경우 화면 정중앙이 origin으로 설정되어있음*/
+		font: 12px 'Malgun Gothic',sans-serif;
+	}
+	#wrap {
+		position: relative;
+		top: 200px;
+		width: 900px;
+		margin: 0 auto;
+	}
+	#wrap .pic {
+		width: 300px;
+	}
+	#wrap .pic img {
+		width: 100%;
+		transition: all 1s;
+		transform-origin: 0 0; /*회전축을 정하는 것*/
+	}
+	#wrap .pic:hover img {
+		/*transform: translate3d(300px,100px,200px);*/
+		/*transform: rotate3d(1,1,1,90deg);*/
+		/*transform: rotateZ(360deg);*/
+		/*transform: scale(1.5,1.5);*/
+		/*transform: scaleZ(1) rotate(90deg);*/
+		/*transform: skew(20deg,15deg); 모서리를 늘어나게 하기*/
+		/*transform: matrix(1.5,0,0.3,1.5,300,100);*/
+		transform: matrix3d(0.64,0,0.77,0,0.00,0.64,0.77,0,-0.77,-0.77,0.4096,0,100,0,0,1);
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="pic"><img src="img/photo.jpg" alt=""></div>
+	</div>
+	
+</body>
+</html>
