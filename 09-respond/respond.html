@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>responsible web</title>
+	<!-- <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/printer.css" media="printer"> -->
+	<style>
+	body {
+		color: #555;
+		font: 12px/1.5 'Trebuchet MS',sans-serif;
+	}
+	#wrap {
+		width: 970px;
+		margin: 0 auto;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	@media screen and (min-width: 1200px) {
+		#wrap {
+			width: 1200px;
+		}
+	}
+	@media screen and (max-width: 970px) { /*970px이하에서는 width를 자동으로 조정되게 하려는 적용법*/
+		#wrap {
+			width: auto;
+		}
+	}
+	@media screen and (max-width: 970px) and (min-width: 481px) {
+		body {
+			background-color: yellow;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		body {
+			font-size: 14px;
+		}
+	}
+	@media screen and (orientation: portrait) {
+		h1:after {
+			content: ' portrait view ';
+			font-size: .8em;
+			font-weight: 700;
+			color: blue;
+		}
+	}
+	@media screen and (orientation: landscape) {
+		h1:after {
+			content: ' landscape view ';
+			font-size: .8em;
+			font-weight: 700;
+			color: red;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>LOGO</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore facilis quae, optio, soluta eligendi nostrum, eveniet doloremque, asperiores tempora est deserunt delectus placeat. Voluptatibus eaque officia dolore, quidem rerum dolorem corporis minima sequi nulla sunt, natus laudantium alias odit assumenda eum sint unde cupiditate molestias, a voluptates! Sint quia laudantium beatae provident dignissimos optio aspernatur impedit facilis, inventore incidunt voluptas nostrum perferendis, dolorum explicabo animi doloremque harum quas exercitationem quibusdam dolore architecto cum id dolor veritatis. Aliquid porro, natus laboriosam, ad inventore, obcaecati ex tenetur similique dignissimos eaque voluptatem delectus consequuntur sit repellat expedita odit totam. Velit cupiditate iure ratione.</p>
+	</div>
+</body>
+</html>
