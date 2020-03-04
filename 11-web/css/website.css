@@ -1,4 +1,7 @@
 @charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,4 +55,148 @@ table {
 #map {
 	width: 100%;
 	height: 500px;
+}
+
+/* reset */
+body {
+	padding-top: 50px;
+	font-family: 'Noto Sans KR', sans-serif; 
+	font-size: 14px;
+}
+.blind {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: -9999em;
+	overflow: hidden;
+}
+.skip a {
+	position: absolute;
+	left: 0;
+	top: -9999em;
+	display: block;
+	width: 100%;
+	background-color: navy;
+	color: #efefef;
+	text-decoration: none;
+	text-align: center;
+	line-height: 2;
+}
+.skip a:focus {
+	top: 0;
+}
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+hr {
+	display: none;
+}
+
+/* style */
+#wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+#header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #000;
+}
+#header .logo {
+	float: left;
+}
+#header .logo a {
+	display: block;
+	padding: 0 20px;
+	background-color: #009688;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+#header .logo a i {
+	margin-right: 10px;
+}
+#header .logo a:hover {
+	background-color: #ccc;
+	color: #000;
+}
+#header .btn_nav {
+	float: right;
+	width: 50px;
+	height: 50px;
+	border: 0;
+	background-image: none;
+	background-color: #333;
+	color: #eee;
+	font-size: 18px;
+	line-height: 50px;
+	cursor: pointer;
+}
+#header .btn_nav:hover {
+	background-color: #ccc;
+	color: #000;
+}
+#header .lnb {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+#header .lnb li a {
+	display: block;
+	padding-left: 20px;
+	border-bottom: 1px solid #333;
+	background-color: #222;
+	color: #ccc;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+#header .lnb li a:hover {
+	background-color: #ddd;
+	color: #000;
+}
+.visual {
+	position: relative;
+	z-index: 20;
+}
+.visual .tle {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	z-index: 10; /*타이틀을 이미지 위로 올리기 위해 우선순위를 설정해줌*/
+	padding: 0 20px;
+	background-color: #000;
+	color: #eee;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	line-height: 65px;
+	cursor: pointer;
+}
+.visual .tle:hover {
+	background-color: #009688;
+	color: #fff;
+}
+.visual .pic {
+	position: relative;
+	z-index: 5;
+}
+.visual .pic img {
+	width: 100%;
+	-webkit-filter: sepia(0.6) grayscale(0.5);
+	-o-filter: sepia(0.6) grayscale(0.5);
+	filter: sepia(0.6) grayscale(0.5);
+
 }
