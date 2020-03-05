@@ -51,12 +51,6 @@ table {
 	border-spacing: 0;
 }
 
-/* maps */
-#map {
-	width: 100%;
-	height: 500px;
-}
-
 /* reset */
 body {
 	padding-top: 50px;
@@ -74,6 +68,7 @@ body {
 	position: absolute;
 	left: 0;
 	top: -9999em;
+	z-index: 9999;
 	display: block;
 	width: 100%;
 	background-color: navy;
@@ -105,7 +100,9 @@ hr {
 #header {
 	position: fixed;
 	top: 0;
+	z-index: 30;
 	width: 100%;
+	max-width: 1200px;
 	background-color: #000;
 }
 #header .logo {
@@ -122,12 +119,13 @@ hr {
 	text-transform: uppercase;
 	line-height: 50px;
 }
-#header .logo a i {
-	margin-right: 10px;
-}
+
 #header .logo a:hover {
 	background-color: #ccc;
 	color: #000;
+}
+#header .logo a i {
+	margin-right: 10px;
 }
 #header .btn_nav {
 	float: right;
@@ -198,5 +196,154 @@ hr {
 	-webkit-filter: sepia(0.6) grayscale(0.5);
 	-o-filter: sepia(0.6) grayscale(0.5);
 	filter: sepia(0.6) grayscale(0.5);
+}
+#container {
+	text-align: center;
+}
+#container .team {
+	padding: 80px 0 60px;
+	border-bottom: 1px solid #ddd;
+}
+#container .team .tle {
+	font-size: 26px;
+	line-height: 60px;
+}
+#container .team .desc {
+	margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 30px;
+}
+#container .human {
 
+}
+#container .human figure img {
+	width: 200px;
+	height: 150px;
+	border-radius: 50%;
+}
+#container .human figcaption {
+	margin-bottom: 20px;
+}
+#container .human figcaption strong {
+	display: block;
+	font-size: 24px;
+	line-height: 50px;
+}
+#container .human figcaption small {
+	display: block;
+	font-size: 1.2em;
+	line-height: 30px;
+}
+#container .pricing {
+	padding: 80px 0 60px;
+	border-bottom: 1px solid #ddd; 
+}
+#container .pricing .tle {
+	font-size: 26px;
+	line-height: 60px;
+}
+#container .pricing .desc {
+	margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 30px;
+}
+#container .pricing dl {
+	margin: 0 20px 20px;
+	border: 1px solid #ccc;
+}
+#container .pricing dt strong {
+	display: block;
+	background-color: #222;
+	color: #eee;
+	font: 24px/3.4 'Verdana',sans-serif;
+}
+#container .pricing .pro dt strong {
+	background-color: #555;
+}
+#container .pricing dd li {
+	border-bottom: 1px solid #ccc;
+	font-size: 1.2em;
+	line-height: 50px
+}
+#container .pricing dd li strong {
+	font-weight: bold;
+	color: #000;
+}
+#container .pricing dd li span {
+	display: block;
+}
+#container .pricing dd li span.pay {
+	padding: 15px 0 0;
+	font-size: 2em;
+}
+#container .pricing dd li span.pay + span { /*바로 다음에 인접한 span태그를 선택하는 것*/
+	color: #666;
+	font-size: .9em;
+}
+#container .pricing dd .sign {
+	padding: 20px 0;
+	background-color: #f0f0f0;
+}
+#container .pricing dd .sign a {
+	display: inline-block;
+	padding: 0 24px;
+	background-color: #009688;
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: none;
+	line-height: 45px;
+}
+#container .pricing dd .sign a i {
+	margin-right: 10px;
+}
+#container .pricing dd .sign a:hover {
+	background-color: #ccc;
+	color: #000;
+}
+#container .contact {
+	padding: 80px 0 60px;
+}
+#container .contact .tle {
+	font-size: 26px;
+	line-height: 60px;
+}
+#container .contact .desc {
+	margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 30px;
+}
+#container .contact #map {/* maps */
+	width: 100%;
+	height: 500px;
+}
+#footer {
+	padding: 30px 0 50px;
+	background-color: #222;
+	color: #eee;
+	text-align: center;
+}
+#footer .desc {
+	margin-bottom: 15px;
+	font-size: 1.3em;
+}
+#footer dl {
+	margin-bottom: 15px;
+}
+#footer dd {
+	display: inline;
+}
+#footer dd a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #009688;
+	color: #eee;
+	font-size: 1.2em; /*폰트어썸으로 지정한 이미지이기 때문에 크기조절도 폰트사이즈로*/
+	text-align: center;
+	line-height: 40px;
+}
+#footer dd a:hover {
+	background-color: #ccc;
+	color: #000;
 }
